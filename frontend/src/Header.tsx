@@ -13,14 +13,10 @@ function Header() {
   const { user, logoutUser } = authContext;
 
   return (
-    <header className="w-full bg-white shadow-md py-4 px-16 flex justify-between items-center fixed">
+    <header className="h-full bg-white shadow-md py-4 px-16 flex justify-between items-center">
       {/* Logo Section */}
       <Link to="/">
-        <div className="flex items-center gap-2">
-          <img src="/logos/react.svg" alt="React Logo" className="h-12 w-12 object-contain" />
-          <span className="text-3xl font-bold text-gray-700">+</span>
-          <img src="/logos/django.svg" alt="Django Logo" className="h-12 w-12 object-contain" />
-        </div>
+        <h1 className="font-extrabold text-4xl">STANDINGS</h1>
       </Link>
 
       {/* Authentication Section */}

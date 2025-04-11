@@ -11,17 +11,19 @@ function App() {
 	return (
 		<BrowserRouter>
 			<AuthProvider>
-				<Header />
-				<main>
-					<Routes>
-						<Route path="/" element={<Landing />} />
-						<Route path="/signup" element={<Signup />} />
-						<Route path="/login" element={<Login />} />
-						<Route element={<PrivateRoute />}>
-							<Route path="/testprivateroute" element={<Dashboard />} />
-						</Route>
-					</Routes>
-				</main>
+				<div className="flex h-screen w-screen">
+					<Header />
+					<main className="grow bg-amber-300">
+						<Routes>
+							<Route path="/" element={<Landing />} />
+							<Route path="/signup" element={<Signup />} />
+							<Route path="/login" element={<Login />} />
+							<Route element={<PrivateRoute />}>
+								<Route path="/testprivateroute" element={<Dashboard />} />
+							</Route>
+						</Routes>
+					</main>
+				</div>
 			</AuthProvider>
 		</BrowserRouter>
 	);
